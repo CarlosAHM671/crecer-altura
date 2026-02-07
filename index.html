@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO: Meta descripción optimizada (máx 160 caracteres) -->
+    <meta name="description"
+        content="¿Hasta qué edad se crece? Calcula tu estatura adulta según tus padres. Guía educativa sobre crecimiento natural en la adolescencia.">
+
+    <!-- SEO: Título atractivo con palabras clave naturales -->
+    <title>¿Puedo crecer más? — Calculadora de estatura para adolescentes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-mark">GC</span>
+                <span>GrowthCheck</span>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#habitos">Hábitos</a></li>
+                    <li><a href="#estiramientos">Estiramientos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <h1>Oye, ¿cuánto crees que vas a medir?</h1>
+                    <p>Seguro alguna vez te has comparado con tus papás o te has preguntado si vas a ser más alto que tu
+                        hermano. Esta calculadora te da una idea de cuánto podrías medir cuando dejes de crecer,
+                        basándose en lo que miden tus papás. No es magia ni es exacta, pero es curiosa.</p>
+                    <a href="#calculadora" class="btn btn--primary btn--large">Ver mi estimación</a>
+
+                    <div class="hero__features">
+                        <div class="hero__feature">
+                            <span class="hero__feature-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg></span>
+                            <span>Usa una fórmula que los pediatras conocen bien</span>
+                        </div>
+                        <div class="hero__feature">
+                            <span class="hero__feature-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg></span>
+                            <span>Tus datos no se guardan ni se envían a ningún lado</span>
+                        </div>
+                        <div class="hero__feature">
+                            <span class="hero__feature-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg></span>
+                            <span>Tips de sueño, comida y ejercicio incluidos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual">
+                    <div class="hero__card">
+                        <div class="hero__card-header">
+                            <div class="hero__card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg></div>
+                            <div>
+                                <div class="hero__card-title">Perfil de ejemplo</div>
+                                <div class="hero__card-subtitle">Datos ilustrativos</div>
+                            </div>
+                        </div>
+                        <div class="hero__card-stats">
+                            <div class="hero__stat">
+                                <div class="hero__stat-label">Rango estimado</div>
+                                <div class="hero__stat-value">172-189 <span class="hero__stat-unit">cm</span></div>
+                            </div>
+                            <div class="hero__stat">
+                                <div class="hero__stat-label">Estatura actual</div>
+                                <div class="hero__stat-value">165 <span class="hero__stat-unit">cm</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora -->
+    <section id="calculadora" class="calculator">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Todavía puedo crecer más?</h2>
+                <p>Pon tu edad, cuánto mides ahora y cuánto miden tus papás. Te damos un rango aproximado.</p>
+            </div>
+
+            <div class="calculator__container">
+                <form id="calculator-form" class="calculator__form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="edad">Tu edad</label>
+                            <input type="number" id="edad" name="edad" min="8" max="20" required placeholder="14">
+                            <span class="form-hint">Entre 8 y 20 años</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sexo">Sexo biológico</label>
+                            <select id="sexo" name="sexo" required>
+                                <option value="">Selecciona</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-group--full">
+                            <label for="estatura-actual">Tu estatura actual</label>
+                            <input type="number" id="estatura-actual" name="estatura-actual" min="100" max="220"
+                                required placeholder="165">
+                            <span class="form-hint">En centímetros</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estatura-padre">Estatura de tu papá</label>
+                            <input type="number" id="estatura-padre" name="estatura-padre" min="140" max="220" required
+                                placeholder="175">
+                            <span class="form-hint">En centímetros</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estatura-madre">Estatura de tu mamá</label>
+                            <input type="number" id="estatura-madre" name="estatura-madre" min="140" max="200" required
+                                placeholder="160">
+                            <span class="form-hint">En centímetros</span>
+                        </div>
+
+                        <div class="form-group form-group--full">
+                            <button type="submit" class="btn btn--primary btn--large btn--full">Calcular</button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Resultados -->
+                <div id="result-container" class="result hidden">
+                    <div class="profile-card">
+                        <div class="profile-card__header">
+                            <div class="profile-card__title">Tu perfil de crecimiento</div>
+                            <div class="profile-card__range">
+                                <span id="range-min" class="profile-card__value">---</span>
+                                <span class="profile-card__separator">–</span>
+                                <span id="range-max" class="profile-card__value">---</span>
+                            </div>
+                            <div class="profile-card__unit">centímetros de estatura estimada</div>
+                        </div>
+
+                        <div class="profile-card__body">
+                            <div class="profile-summary">
+                                <div class="profile-summary__item">
+                                    <div class="profile-summary__label">Tu estatura</div>
+                                    <div id="summary-current" class="profile-summary__value">— cm</div>
+                                </div>
+                                <div class="profile-summary__item">
+                                    <div class="profile-summary__label">Papá</div>
+                                    <div id="summary-father" class="profile-summary__value">— cm</div>
+                                </div>
+                                <div class="profile-summary__item">
+                                    <div class="profile-summary__label">Mamá</div>
+                                    <div id="summary-mother" class="profile-summary__value">— cm</div>
+                                </div>
+                            </div>
+
+                            <div id="result-explanation" class="profile-explanation"></div>
+
+                            <div class="profile-indicators">
+                                <div class="profile-indicators__title">¿Qué significa esto?</div>
+
+                                <div class="indicator">
+                                    <div class="indicator__icon"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M21 6H3"></path>
+                                            <path d="M10 12H3"></path>
+                                            <path d="M10 18H3"></path>
+                                            <path d="M18 12h3"></path>
+                                            <path d="M18 18h3"></path>
+                                        </svg></div>
+                                    <div class="indicator__content">
+                                        <div class="indicator__label">Progreso hacia tu rango estimado</div>
+                                        <div class="indicator__bar">
+                                            <div id="progress-bar" class="indicator__progress" style="width: 0%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="indicator">
+                                    <div class="indicator__icon"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M2 15c6.667-6 13.333 0 20-6"></path>
+                                            <path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"></path>
+                                            <path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"></path>
+                                        </svg></div>
+                                    <div class="indicator__content">
+                                        <div id="genetic-text" class="indicator__label">La genética de tus padres
+                                            sugiere este rango</div>
+                                    </div>
+                                </div>
+
+                                <div class="indicator">
+                                    <div class="indicator__icon"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                                        </svg></div>
+                                    <div class="indicator__content">
+                                        <div id="age-text" class="indicator__label">Información sobre tu etapa de
+                                            crecimiento</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="disclaimer-box">
+                                <div class="disclaimer-box__icon"><svg width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                        </path>
+                                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                    </svg></div>
+                                <div class="disclaimer-box__content">
+                                    <h4>Esto no es un diagnóstico médico</h4>
+                                    <p>Esta calculadora es solo una herramienta educativa. El crecimiento real depende
+                                        de muchos factores como nutrición, salud y genética compleja. Si tienes dudas
+                                        sobre tu crecimiento, consulta a un médico.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hábitos -->
+    <section id="habitos" class="habits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cosas que sí puedes hacer</h2>
+                <p>Ok, no puedes elegir tus genes. Pero sí puedes darle a tu cuerpo lo que necesita para crecer todo lo
+                    que pueda. Aquí van algunos tips.</p>
+            </div>
+
+            <div class="habits__grid">
+                <article class="habit-card">
+                    <div class="habit-card__header">
+                        <div class="habit-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg></div>
+                        <h3 class="habit-card__title">Dormir lo suficiente</h3>
+                    </div>
+                    <ul class="habit-card__list">
+                        <li>En serio, entre 8 y 10 horas. Cuando duermes, tu cuerpo produce hormona del crecimiento. No
+                            es broma.</li>
+                        <li>Intenta acostarte a la misma hora. Tu cuerpo se acostumbra y descansas mejor.</li>
+                        <li>El cel antes de dormir te arruina el sueño. Déjalo aunque sea media hora antes.</li>
+                    </ul>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-card__header">
+                        <div class="habit-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z">
+                                </path>
+                                <path d="M10 2c1 .5 2 2 2 5"></path>
+                            </svg></div>
+                        <h3 class="habit-card__title">Alimentarte bien</h3>
+                    </div>
+                    <ul class="habit-card__list">
+                        <li>Proteína en cada comida: huevo, pollo, carne, pescado, frijoles, lentejas... lo que haya en
+                            tu casa.</li>
+                        <li>Calcio: leche, queso, yogur, tortilla. Tu esqueleto lo necesita.</li>
+                        <li>Menos refrescos y papitas. No te matan, pero tampoco te ayudan a crecer.</li>
+                    </ul>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-card__header">
+                        <div class="habit-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <path d="m4 17 4-4 2 2 4-4"></path>
+                                <path d="m12 15 4 4h4"></path>
+                                <path d="M8 21h4l-2-4-4 4-2-2"></path>
+                            </svg></div>
+                        <h3 class="habit-card__title">Moverte todos los días</h3>
+                    </div>
+                    <ul class="habit-card__list">
+                        <li>Moverte hace que tu cuerpo produzca más hormona del crecimiento. No necesitas un gym.</li>
+                        <li>Básquet, natación, volibol, futbol... cualquier cosa que te haga saltar o estirarte está
+                            bien.</li>
+                        <li>Ojo con las pesas muy pesadas si aún estás creciendo. Mejor espera un poco.</li>
+                    </ul>
+                </article>
+
+                <article class="habit-card">
+                    <div class="habit-card__header">
+                        <div class="habit-card__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="5" r="2"></circle>
+                                <path d="M12 7v5"></path>
+                                <path d="M8 12h8"></path>
+                                <path d="M5 20h14"></path>
+                                <path d="M12 12l-4 8"></path>
+                                <path d="M12 12l4 8"></path>
+                            </svg></div>
+                        <h3 class="habit-card__title">Cuidar tu postura</h3>
+                    </div>
+                    <ul class="habit-card__list">
+                        <li>Cuando estés en la compu o haciendo tarea, siéntate derecho. Sí, como dice tu mamá.</li>
+                        <li>Una mala postura te puede hacer ver 2-3 cm más chap@rro de lo que eres.</li>
+                        <li>Si pasas mucho tiempo sentado, levántate y estírate cada hora.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estiramientos -->
+    <section id="estiramientos" class="stretching">
+        <div class="container">
+            <div class="section-header">
+                <h2>Estiramientos para mejorar la postura y flexibilidad</h2>
+                <p>10-15 minutos al día pueden ayudarte a mantener tu espalda sana y una buena postura corporal.</p>
+            </div>
+
+            <div class="stretching__container">
+                <div class="stretching__list">
+                    <div class="stretch-item">
+                        <div class="stretch-item__number">1</div>
+                        <div class="stretch-item__content">
+                            <h4>Gato-vaca</h4>
+                            <p>Ponte en cuatro puntos. Arquea la espalda hacia arriba y luego hacia abajo, alternando.
+                                Haz 10 repeticiones lentas.</p>
+                        </div>
+                    </div>
+
+                    <div class="stretch-item">
+                        <div class="stretch-item__number">2</div>
+                        <div class="stretch-item__content">
+                            <h4>Cobra</h4>
+                            <p>Boca abajo, levanta el pecho apoyándote en las manos. Mantén 15-20 segundos. Repite 3
+                                veces.</p>
+                        </div>
+                    </div>
+
+                    <div class="stretch-item">
+                        <div class="stretch-item__number">3</div>
+                        <div class="stretch-item__content">
+                            <h4>Tocarse los pies</h4>
+                            <p>De pie, baja e intenta tocar tus pies sin doblar las rodillas. No importa si no llegas,
+                                el estiramiento es lo que cuenta.</p>
+                        </div>
+                    </div>
+
+                    <div class="stretch-item">
+                        <div class="stretch-item__number">4</div>
+                        <div class="stretch-item__content">
+                            <h4>Estiramiento de hombros</h4>
+                            <p>Cruza un brazo frente a tu pecho y presiónalo suavemente con el otro. 15 segundos de cada
+                                lado.</p>
+                        </div>
+                    </div>
+
+                    <div class="stretch-item">
+                        <div class="stretch-item__number">5</div>
+                        <div class="stretch-item__content">
+                            <h4>Colgarse de una barra</h4>
+                            <p>Si tienes acceso a una barra, cuélgate con los brazos estirados y relaja tu cuerpo. 30
+                                segundos a 1 minuto.</p>
+                        </div>
+                    </div>
+
+                    <div class="stretch-item">
+                        <div class="stretch-item__number">6</div>
+                        <div class="stretch-item__content">
+                            <h4>Cuello</h4>
+                            <p>Inclina la cabeza suavemente hacia cada lado. Mantén los hombros relajados. 15 segundos
+                                por lado.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-box">
+                    <h4>Recomendaciones</h4>
+                    <ul>
+                        <li>Lo mejor es hacerlo en la mañana o antes de dormir</li>
+                        <li>Nunca fuerces hasta sentir dolor</li>
+                        <li>Respira tranquilo durante cada ejercicio</li>
+                        <li>Lo más importante es ser constante, no intenso</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__logo">
+                        <span class="logo-mark">GC</span>
+                        <span>GrowthCheck</span>
+                    </div>
+                    <p class="footer__text">Herramienta educativa. No reemplaza el consejo médico.</p>
+                </div>
+                <nav class="footer__nav">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#calculadora">Calculadora</a>
+                    <a href="#habitos">Hábitos</a>
+                    <a href="#estiramientos">Estiramientos</a>
+                    <a href="nosotros.html">Nosotros</a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 GrowthCheck</p>
+                <nav class="footer__legal">
+                    <a href="aviso.html">Aviso legal</a>
+                    <a href="privacidad.html">Privacidad</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/calculator.js"></script>
+</body>
+
+</html>
